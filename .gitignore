@@ -1,0 +1,12 @@
+.cfg
+.dotfiles
+
+# depends on res
+.config/leftwm/themes/Custom/polybar/fonts.ini
+
+# 
+.config/leftwm/themes/current
+
+# depends on res
+.config/leftwm/themes/Custom/theme.ron
+
