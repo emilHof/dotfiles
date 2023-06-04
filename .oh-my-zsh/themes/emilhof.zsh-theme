@@ -138,7 +138,7 @@ prompt_dir() {
       path_seg=' %~ '
       ;;
   esac
-  prompt_segment blue $PRIMARY_FG " ${path_seg}"
+  prompt_segment blue $PRIMARY_FG " ${path_seg} "
 }
 
 # Status:
