@@ -1,0 +1,27 @@
+{
+	  "languageserver": {
+		  "ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+			"initializationOptions": {
+				"cache": {
+				  "directory": "/tmp/ccls"
+				}
+			},
+			"zls": {
+				"path": "/home/emil/.bin/zls",
+				"filetypes": ["zig"]
+			}
+		}
+	},
+	"coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "jsx", "ts", "tsx"],
+	"coc.preferences.formatOnSave": true,
+	"eslint.autoFixOnSave": true,
+	"eslint.filetypes": ["javascript", "typescript", "tyepscriptreact", "javascriptreact", "typesctipt.tsx"],
+	"zig.enabled": true,
+	"zig.startUpMessage": true,
+	"zig.path": "/home/emil/.bin/zls",
+	"zig.debugLog": false,
+	"pyright.enable": true,
+}
