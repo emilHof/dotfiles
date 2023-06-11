@@ -15,7 +15,7 @@ export DEFAULT_USER=$USER
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
 ZSH_CUSTOM="$HOME/.oh-my-zsh"
-ZSH_THEME="emilhof"
+ZSH_THEME="hoffish"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
