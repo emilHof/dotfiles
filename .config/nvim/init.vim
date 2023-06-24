@@ -44,8 +44,13 @@ Plug 'ldelossa/litee-filetree.nvim'
 Plug 'ldelossa/litee-symboltree.nvim'
 Plug 'voldikss/vim-floaterm'
 
-"Documentation
+" Documentation
 Plug 'tyru/open-browser.vim'
+
+" Prose
+Plug 'nvim-orgmode/orgmode'
+Plug 'ron89/thesaurus_query.vim'
+Plug 'emilHof/poetry-vim'
 
 " Github
 Plug 'APZelos/blamer.nvim'
@@ -73,10 +78,6 @@ Plug '~/.local/share/nvim/eclim'
 
 " AI
 Plug 'madox2/vim-ai'
-
-" Prose
-Plug 'ron89/thesaurus_query.vim'
-Plug 'emilHof/poetry-vim'
 call plug#end()
 
 
@@ -494,5 +495,31 @@ let g:mkdp_filetypes = ['markdown']
 let g:mkdp_theme = 'light'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" AI
+" Orgmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua << EOF
+
+-- Load custom treesitter grammar for org filetype
+require('orgmode').setup_ts_grammar()
+
+-- Treesitter configuration
+require('nvim-treesitter.configs').setup {
+  -- If TS highlights are not enabled at all, or disabled via `disable` prop,
+  -- highlighting will fallback to default Vim syntax highlighting
+  highlight = {
+    enable = true,
+    -- Required for spellcheck, some LaTex highlights and
+    -- code block highlights that do not have ts grammar
+    additional_vim_regex_highlighting = {'org'},
+  },
+  ensure_installed = {'org'}, -- Or run :TSUpdate org
+}
+
+require('orgmode').setup({
+  org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
+  org_default_notes_file = '~/Dropbox/org/refile.org',
+})
+
+EOF
+
+
