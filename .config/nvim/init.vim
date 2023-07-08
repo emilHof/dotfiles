@@ -417,6 +417,7 @@ let g:openbrowser_search_engines = extend(
 \ {
 \   'rs': 'https://doc.rust-lang.org/std/?search={query}',
 \   'cr': 'https://crates.io/search?q={query}',
+\   'lr': 'https://lib.rs/search?q={query}',
 \   'qt': 'https://doc.qt.io/qt-5/search-results.html?q={query}',
 \ },
 \ 'keep'
