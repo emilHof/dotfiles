@@ -48,7 +48,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tyru/open-browser.vim'
 
 " Prose
-Plug 'nvim-neorg/neorg'
+Plug 'nvim-neorg/neorg', { 'do': ':Neorg sync-parsers' }
 Plug 'ron89/thesaurus_query.vim'
 Plug 'emilHof/poetry-vim'
 
@@ -496,9 +496,18 @@ let g:mkdp_filetypes = ['markdown']
 let g:mkdp_theme = 'light'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Orgmode
+" Neorg and Treesitter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "norg" },
+
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  }
+}
+
 require('neorg').setup {
     load = {
         ["core.defaults"] = {}, -- Loads default behaviour
@@ -506,12 +515,13 @@ require('neorg').setup {
         ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
                 workspaces = {
-                    notes = "~/notes",
+                    main = "~/notes/main",
+					todo = "~/notes/todo"
                 },
+				default_workspace = "main"
             },
         },
     },
 }
 EOF
-
 
