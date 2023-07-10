@@ -524,4 +524,3 @@ require('neorg').setup {
     },
 }
 EOF
-

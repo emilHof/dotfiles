@@ -1,4 +1,4 @@
-vim.cmd [[packadd packer.nvim]]
+vim.cmd('packadd packer.nvim')
 vim.keymap.set("n", "<leader>ps", vim.cmd.PackerSync)
 
 return require("packer").startup(function(use)
@@ -61,12 +61,15 @@ return require("packer").startup(function(use)
 
 	use {
 		"https://git.sr.ht/~nedia/auto-format.nvim",
-		config = function()
-			require("auto-format").setup()
-		end
 	}
 
 	use {
 		"f-person/git-blame.nvim",
+	}
+
+	use {
+		"nvim-neorg/neorg",
+		run = ":Neorg sync-parsers",
+		requires = "nvim-lua/plenary.nvim",
 	}
 end)
