@@ -72,4 +72,18 @@ return require("packer").startup(function(use)
 		run = ":Neorg sync-parsers",
 		requires = "nvim-lua/plenary.nvim",
 	}
+
+	use "alvan/vim-closetag"
+
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	}
+
+	use {
+		'notjedi/nvim-rooter.lua',
+		config = function() require 'nvim-rooter'.setup() end
+	}
+
+	use "emilHof/poetry-vim"
 end)
