@@ -3,12 +3,13 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    "tsserver",
+	"tsserver",
 	"eslint",
 	"rust_analyzer",
 	"lua_ls",
 	"pyright",
 	"asm_lsp",
+	"zls",
 })
 
 local cmp = require("cmp")
