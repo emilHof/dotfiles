@@ -1,4 +1,4 @@
-vim.cmd('packadd packer.nvim')
+vim.cmd("packadd packer.nvim")
 vim.keymap.set("n", "<leader>ps", vim.cmd.PackerSync)
 
 return require("packer").startup(function(use)
@@ -81,8 +81,19 @@ return require("packer").startup(function(use)
 	}
 
 	use {
-		'notjedi/nvim-rooter.lua',
-		config = function() require 'nvim-rooter'.setup() end
+		"notjedi/nvim-rooter.lua",
+		config = function() require "nvim-rooter".setup() end
+	}
+
+	use {
+		"voldikss/vim-floaterm",
+		config = function()
+			vim.keymap.set("n", "t", ":FloatermToggle myfloat <CR>", { silent = true })
+			vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:q<CR>", { silent = true })
+			vim.g.floaterm_width = 140
+			vim.g.floaterm_height = 90
+		end
+
 	}
 
 	use "emilHof/poetry-vim"
