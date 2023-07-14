@@ -88,10 +88,14 @@ return require("packer").startup(function(use)
 	use {
 		"voldikss/vim-floaterm",
 		config = function()
-			vim.keymap.set("n", "t", ":FloatermToggle myfloat <CR>", { silent = true })
+			vim.cmd("hi FloatermBorder guifg=orange")
+			vim.keymap.set(
+				"n",
+				"t",
+				":FloatermToggle --name=term --height .85 --width .85 <CR>",
+				{ silent = true }
+			)
 			vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:q<CR>", { silent = true })
-			vim.g.floaterm_width = 140
-			vim.g.floaterm_height = 90
 		end
 
 	}
