@@ -17,3 +17,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "100"
 
 vim.rustfmt_autosave = 1
+
+vim.opt.conceallevel = 2

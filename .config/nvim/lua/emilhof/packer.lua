@@ -101,4 +101,12 @@ return require("packer").startup(function(use)
 	}
 
 	use "emilHof/poetry-vim"
+
+	use {
+		'stevearc/oil.nvim',
+		config = function()
+			require('oil').setup();
+			vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+		end
+	}
 end)
