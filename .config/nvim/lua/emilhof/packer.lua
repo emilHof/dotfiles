@@ -64,6 +64,10 @@ return require("packer").startup(function(use)
 	}
 
 	use {
+		"mhinz/vim-signify"
+	}
+
+	use {
 		"f-person/git-blame.nvim",
 	}
 
