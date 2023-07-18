@@ -16,3 +16,4 @@ require('neorg').setup {
 
 vim.keymap.set("n", "<leader>nc", ":Neorg toggle-concealer<CR>", { silent = true })
 vim.keymap.set("n", "<leader>do", ":Neorg workspace todo<CR>", { silent = true })
+vim.keymap.set("n", "<leader>no", ":Neorg workspace notes<CR>", { silent = true })
