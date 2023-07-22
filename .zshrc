@@ -191,10 +191,6 @@ alias userlist="cut -d: -f1 /etc/passwd | sort"
 #merge new settings
 alias merge="xrdb -merge ~/.Xresources"
 
-# Aliases for software managment
-# pacman
-alias pacman="sudo pacman --color auto"
-alias update="sudo pacman -Syyu"
 
 # paru as aur helper - updates everything
 alias pksyua="paru -Syu --noconfirm"
@@ -475,14 +471,25 @@ export PATH=$PATH:$HOME/go/bin
 
 export PATH="$PATH:$HOME/go/bin"
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+
+# nvim location shortcuts
 alias vfg='/usr/bin/nvim ~/.config/nvim/init.vim'
 alias zfg='/usr/bin/nvim ~/.zshrc'
+
+# git repo shortcuts
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias vault='/usr/bin/git --git-dir=$HOME/obsidian-vault/.git/ --work-tree=$HOME/obsidian-vault'
-# alias vcp='/usr/bin/git --git-dir=$HOME/obsidian-vault/.git/ commit -am "auto commit" && /usr/bin/git --git-dir=$HOME/obsidian-vault/.git/ push'
 alias cgi='/usr/bin/lazygit --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias agi='/usr/bin/lazygit --git-dir=$HOME/obsidian-vault/.git --work-tree=$HOME/obsidian-vault'
+
+# arch shortcuts
 alias dock='/bin/xrandr --output HDMI-1-0 --auto --right-of eDP-1 && /bin/xrandr --dpi 100 --fb 3440x1440 --output eDP-1 --off --output HDMI-1-0 --auto'
+
+# Aliases for software managment with pacman
+alias pacman="sudo pacman --color auto"
+alias update="pacman -Syuw && pacman -Su"
+
 source /usr/share/nvm/init-nvm.sh
 
 export NVM_DIR="$HOME/.nvm"
