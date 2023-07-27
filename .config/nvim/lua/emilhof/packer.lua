@@ -13,6 +13,16 @@ return require("packer").startup(function(use)
 
 	use "ellisonleao/gruvbox.nvim"
 
+ use {
+  "nvim-lualine/lualine.nvim",
+  requires = { "nvim-tree/nvim-web-devicons", opt = true },
+  config = function()
+   requires("lualine").setup {
+    options = { theme = "gruvbox" }
+   }
+  end,
+ }
+
 	use {
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
