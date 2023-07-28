@@ -8,6 +8,7 @@ lsp.ensure_installed({
 	"rust_analyzer",
 	"lua_ls",
 	"pyright",
+	"taplo",
 	"asm_lsp",
 	"zls",
 })

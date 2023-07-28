@@ -54,7 +54,7 @@ return require("packer").startup(function(use)
 		requires = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
-			{       -- Optional
+			{                   -- Optional
 				"williamboman/mason.nvim",
 				run = function()
 					pcall(vim.cmd, "MasonUpdate")
@@ -67,6 +67,27 @@ return require("packer").startup(function(use)
 			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
 			{ "L3MON4D3/LuaSnip" }, -- Required
 		}
+	}
+
+	use {
+		"simrat39/rust-tools.nvim",
+		config = function()
+			require("rust-tools").setup({
+				server = {
+					on_attach = function(_, bufnr)
+						-- Hover actions
+						vim.keymap.set("n", "<C-space>",
+							require("rust-tools").hover_actions.hover_actions,
+							{ buffer = bufnr })
+						-- Code action groups
+						vim.keymap.set("n", "<Leader>a",
+							require("rust-tools").code_action_group.code_action_group,
+							{ buffer = bufnr })
+					end
+				}
+			})
+		end
+
 	}
 
 	use {
@@ -122,5 +143,9 @@ return require("packer").startup(function(use)
 			require('oil').setup();
 			vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
 		end
+	}
+
+	use {
+		"tyru/open-browser.vim",
 	}
 end)
