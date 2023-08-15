@@ -298,6 +298,8 @@ alias vault='/usr/bin/git --git-dir=$HOME/obsidian-vault/.git/ --work-tree=$HOME
 alias cgi='/usr/bin/lazygit --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias dgi='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias agi='/usr/bin/lazygit --git-dir=$HOME/obsidian-vault/.git --work-tree=$HOME/obsidian-vault'
+alias todo="nvim $HOME/neorg/todo/index.norg"
+alias notes="nvim $HOME/neorg/notes/index.norg"
 
 # arch shortcuts
 alias dock='/bin/xrandr --output HDMI-1-0 --auto --right-of eDP-1 && /bin/xrandr --dpi 100 --fb 3440x1440 --output eDP-1 --off --output HDMI-1-0 --auto'
