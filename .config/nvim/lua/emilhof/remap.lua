@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>C", vim.cmd.close)
 
 -- Terminal buffer controls
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:q<CR>", { silent = true })
+vim.keymap.set("t", "<C-q>", "<C-\\><C-n>:q<CR>", { silent = true })
+vim.keymap.set("t", "<Esc>", "", { silent = true })
 vim.keymap.set("t", "<C-w>h", "<C-\\><C-n><C-w>h", { silent = true })
 vim.keymap.set("t", "<C-w>j", "<C-\\><C-n><C-w>j", { silent = true })
 vim.keymap.set("t", "<C-w>k", "<C-\\><C-n><C-w>k", { silent = true })
