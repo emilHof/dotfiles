@@ -130,7 +130,6 @@ return require("packer").startup(function(use)
 				":FloatermToggle --name=term --height .85 --width .85 <CR>",
 				{ silent = true }
 			)
-			vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:q<CR>", { silent = true })
 		end
 
 	}
