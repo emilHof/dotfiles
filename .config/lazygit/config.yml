@@ -1,10 +1,6 @@
 os:
   editCommand: 'floaterm'
 
-keybinding:
-  universal:
-    return: '<c-\>'
-
 gui:
   theme:
     selectedLineBgColor:
