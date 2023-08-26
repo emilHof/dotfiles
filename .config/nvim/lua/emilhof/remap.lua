@@ -20,5 +20,6 @@ vim.keymap.set("t", "<C-w>j", "<C-\\><C-n><C-w>j", { silent = true })
 vim.keymap.set("t", "<C-w>k", "<C-\\><C-n><C-w>k", { silent = true })
 vim.keymap.set("t", "<C-w>l", "<C-\\><C-n><C-w>l", { silent = true })
 
+
 -- Dir Navigation
 vim.keymap.set("n", "<leader>V", ":e $HOME/.config/nvim/.<CR>", { silent = true })
