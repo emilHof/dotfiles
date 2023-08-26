@@ -22,3 +22,9 @@ vim.rustfmt_autosave = 1
 vim.opt.conceallevel = 2
 
 vim.cmd("set spell")
+
+vim.api.nvim_create_autocmd({ "TermOpen" }, {
+	callback = function()
+		vim.cmd.startinsert()
+	end
+})

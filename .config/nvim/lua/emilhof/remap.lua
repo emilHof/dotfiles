@@ -5,6 +5,11 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>|", vim.cmd.vsplit)
 vim.keymap.set("n", "<leader>:", vim.cmd.split)
 vim.keymap.set("n", "<leader>C", vim.cmd.close)
+vim.keymap.set("n", "<leader>T", function()
+	vim.cmd.vsplit();
+	vim.cmd("term");
+	vim.cmd.startinsert();
+end)
 
 -- Terminal buffer controls
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:q<CR>", { silent = true })
