@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>:", vim.cmd.split)
 vim.keymap.set("n", "<leader>C", vim.cmd.close)
 vim.keymap.set("n", "<leader>T", function()
 	vim.cmd.vsplit();
+	vim.cmd("wincmd l");
 	vim.cmd("term");
 	vim.cmd.startinsert();
 end)
