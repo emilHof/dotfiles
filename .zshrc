@@ -289,7 +289,7 @@ export PATH="$PATH:$HOME/go/bin"
 
 
 # nvim location shortcuts
-alias vfg='/usr/bin/nvim ~/.config/nvim/init.vim'
+alias vfg='/usr/bin/nvim ~/.config/nvim .'
 alias zfg='/usr/bin/nvim ~/.zshrc'
 alias vi='/usr/bin/nvim .'
 
@@ -299,6 +299,7 @@ alias vault='/usr/bin/git --git-dir=$HOME/obsidian-vault/.git/ --work-tree=$HOME
 alias cgi='/usr/bin/lazygit --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias dgi='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias agi='/usr/bin/lazygit --git-dir=$HOME/obsidian-vault/.git --work-tree=$HOME/obsidian-vault'
+alias dgi='/usr/bin/lazygit --git-dir=$HOME/neorg/.git --work-tree=$HOME/neorg'
 alias td="nvim $HOME/neorg/todo/index.norg"
 alias nt="nvim $HOME/neorg/notes/index.norg"
 
