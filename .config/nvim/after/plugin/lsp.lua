@@ -11,6 +11,7 @@ lsp.ensure_installed({
 	"taplo",
 	"asm_lsp",
 	"zls",
+	"solang",
 })
 
 local cmp = require("cmp")
