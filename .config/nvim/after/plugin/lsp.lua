@@ -12,6 +12,7 @@ lsp.ensure_installed({
 	"asm_lsp",
 	"zls",
 	"solang",
+	"jsonls",
 })
 
 local cmp = require("cmp")

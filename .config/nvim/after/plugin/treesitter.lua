@@ -1,7 +1,7 @@
 require 'nvim-treesitter.configs'.setup {
 	ensure_installed = {
 		"c", "lua", "vim", "vimdoc", "query", "javascript", "typescript", "diff", "norg",
-		"norg_meta", "python", "zig"
+		"norg_meta", "python", "zig", "json", 'markdown'
 	},
 	sync_install = false,
 	auto_install = true,
@@ -14,7 +14,7 @@ require 'nvim-treesitter.configs'.setup {
 	playground = {
 		enable = true,
 		disable = {},
-		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+		updatetime = 25,   -- Debounced time for highlighting nodes in the playground from source code
 		persist_queries = false, -- Whether the query persists across vim sessions
 		keybindings = {
 			toggle_query_editor = 'o',
