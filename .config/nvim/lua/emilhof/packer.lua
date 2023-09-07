@@ -158,4 +158,9 @@ return require("packer").startup(function(use)
 			require("nvim-ts-autotag").setup()
 		end
 	}
+
+	use({
+		'toppair/peek.nvim',
+		run = 'deno task --quiet build:fast'
+	})
 end)
