@@ -291,7 +291,7 @@ export PATH="$PATH:$HOME/go/bin"
 # nvim location shortcuts
 alias vfg='/usr/bin/nvim ~/.config/nvim .'
 alias zfg='/usr/bin/nvim ~/.zshrc'
-alias vi='/usr/bin/nvim .'
+alias v='/usr/bin/nvim .'
 
 # git repo shortcuts
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
